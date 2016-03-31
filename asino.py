@@ -4,7 +4,9 @@ if __name__ == '__main__':
     args = list()
     if not sys.stdin.isatty():
         for line in sys.stdin:
-            args.append(line[:-1])
+            if line[-1] is '\n':
+                line = line[:-1]
+            args.append(line)
     else:
         args = sys.argv[1:]
     argRange = len(args)
