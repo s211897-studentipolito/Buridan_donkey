@@ -10,4 +10,3 @@ if __name__ == '__main__':
     argRange = len(args)
     for i in range(argRange):
         print(str(i+1) + '.', args.pop(random.randrange(0, len(args))))    
-    print('\n', start, end)
